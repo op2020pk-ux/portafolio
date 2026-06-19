@@ -1,0 +1,114 @@
+/* css/inicio.css */
+
+.intro-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Capa oscura superior + Imagen HD de tecnología/código que abarca toda la pantalla */
+    background: linear-gradient(rgba(13, 14, 21, 0.75), rgba(13, 14, 21, 0.85)), 
+                url('https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1920') no-repeat center center/cover;
+}
+
+.brand-showcase {
+    text-align: center;
+    padding: 3.5rem 2rem;
+    background: rgba(22, 25, 37, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 242, 254, 0.05);
+    max-width: 550px;
+    width: 90%;
+    animation: fadeIn 1s ease-out;
+}
+
+.brand-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.brand-title span {
+    color: var(--neon-blue);
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+}
+
+.brand-tagline {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de opciones de entrada */
+.action-grid {
+    display: block;
+    text-align: center;
+}
+
+.btn-portal {
+    display: inline-block;
+    width: 45%;
+    margin: 0 2%;
+    padding: 1.2rem 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.btn-portal i {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.btn-portal span {
+    display: block;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Zona Cliente (Estilo Neón Cian) */
+.client-zone {
+    background: rgba(0, 242, 254, 0.03);
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.client-zone:hover {
+    background: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+    transform: translateY(-4px);
+}
+
+/* Zona Administrador (Estilo Neón Morado) */
+.admin-zone {
+    background: rgba(79, 172, 254, 0.03);
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple);
+}
+
+.admin-zone:hover {
+    background: var(--neon-purple);
+    color: #fff;
+    box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
+    transform: translateY(-4px);
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

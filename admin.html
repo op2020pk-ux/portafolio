@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control | OP Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="inicio.html" class="logo">OP<span>_PANEL</span></a>
+        <nav>
+            <a href="index.html" class="btn-neon"><i class="fa-solid fa-arrow-left"></i> Volver al Catálogo</a>
+        </nav>
+    </header>
+
+    <main class="container-admin">
+        
+        <div id="bloque-auth" class="auth-box">
+            <h3><i class="fa-solid fa-shield-halved"></i> Control de Acceso</h3>
+            <form id="form-seguridad">
+                <input type="password" id="pass-control" placeholder="Introduzca Firma Digital" required>
+                <button type="submit" class="btn-admin-submit">Autenticar Panel</button>
+            </form>
+        </div>
+
+        <div id="zona-privada" class="hidden" style="width: 100%;">
+            <div class="panel-header">
+                <h2><i class="fa-solid fa-gears"></i> Gestor de Contenido (OP)</h2>
+                <div>
+                    <a href="compras.html" class="btn-success" style="background: var(--neon-blue); text-decoration: none; margin-right: 10px; display: inline-block; padding: 0.6rem 1.2rem; color: #000;"><i class="fa-solid fa-receipt"></i> Ver Compras Realizadas</a>
+                    <button id="btn-cerrar-sesion" class="btn-danger">Bloquear Panel</button>
+                </div>
+            </div>
+
+            <form id="form-proyecto" class="form-crud">
+                <input type="hidden" id="proyecto-id">
+                <div class="crud-inputs">
+                    <input type="text" id="p-titulo" placeholder="Título del Software / Sistema" required>
+                    <input type="text" id="p-imagen" placeholder="URL de la Imagen de Portada" required>
+                    <input type="text" id="p-precio" placeholder="Precio (Ej: $150.00)" required>
+                    <input type="text" id="p-demo" placeholder="URL de Demostración (Opcional)">
+                    <textarea id="p-descripcion" rows="4" placeholder="Descripción detallada de las funciones y tecnologías del software..." required></textarea>
+                </div>
+                <button type="submit" id="btn-guardar" class="btn-success"><i class="fa-solid fa-floppy-disk"></i> Publicar en Catálogo</button>
+            </form>
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--neon-purple);">Proyectos Actualmente Publicados</h3>
+            <div id="admin-grid-proyectos" class="admin-grid">
+                </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

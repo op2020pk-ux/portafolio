@@ -1,0 +1,36 @@
+/* css/admin.css */
+.container-admin { padding: 3rem 5%; display: flex; justify-content: center; min-height: 80vh; }
+.hidden { display: none !important; }
+
+/* Caja de login */
+.auth-box {
+    background: var(--bg-card);
+    border: 1px solid var(--neon-purple);
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    height: fit-content;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.1);
+}
+.auth-box h3 { margin-bottom: 1rem; font-size: 1.4rem; color: var(--neon-purple); }
+.auth-box input { width: 100%; margin-bottom: 1.5rem; padding: 0.8rem; background: var(--bg-input); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 4px; text-align: center;}
+.btn-admin-submit { background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue)); color: #fff; width: 100%; border: none; padding: 0.8rem; border-radius: 4px; font-weight: bold; cursor: pointer; }
+
+/* Zona Privada Activa */
+#zona-privada { width: 100%; }
+.panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.form-crud { background: var(--bg-card); padding: 2rem; border-radius: 6px; border-left: 4px solid var(--neon-blue); }
+.crud-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; margin-bottom: 1.5rem; }
+.form-crud input, .form-crud textarea { background: var(--bg-input); border: 1px solid rgba(255,255,255,0.08); color: #fff; padding: 0.8rem; border-radius: 4px; }
+.form-crud textarea { grid-column: 1 / -1; }
+
+/* Botones de acción */
+.btn-success { background: var(--accent-green); color: #000; border: none; padding: 0.8rem 2rem; font-weight: bold; cursor: pointer; border-radius: 4px; }
+.btn-danger { background: var(--accent-red); color: #fff; border: none; padding: 0.6rem 1.2rem; font-weight: bold; cursor: pointer; border-radius: 4px; }
+.btn-warn { background: #ffb300; color: #000; border: none; padding: 0.5rem 1rem; font-weight: bold; cursor: pointer; border-radius: 4px; margin-right: 5px;}
+
+/* Grid en vista de administración */
+.admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.admin-card { background: var(--bg-input); padding: 1rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.05); }
